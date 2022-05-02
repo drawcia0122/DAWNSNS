@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Http\Request;
 
+
 class RegisterController extends Controller
 {
     /*
@@ -48,10 +49,19 @@ class RegisterController extends Controller
      */
     protected function validator(array $data)
     {
+        //makeでルールを作っている、$dateを照合している。
         return Validator::make($data, [
-            'username' => 'required|string|max:255',
-            'mail' => 'required|string|email|max:255|unique:users',
-            'password' => 'required|string|min:4|confirmed',
+            'username' => 'required|string|min:4|max:12',
+            'mail' => 'required|string|email|min:4|max:50|unique:users',
+            'password' => 'required|string|min:4|confirmed|regex:/^[0-9a-zA-Z]+$/',
+        ],[
+            'required' => 'この項目は必須です',
+            'min' => '4文字以上で入力お願いします。',
+            'username.max' => '名前は12文字までです。',
+            'mail.max' => '50文字以内でお願いします。',
+            'email' => 'メールアドレスでお願いします。',
+            'confirmed' => 'パスワードが一致していません。',
+            'regex' => '半角英数字でお願いします。',
         ]);
     }
 
@@ -78,6 +88,16 @@ class RegisterController extends Controller
     public function register(Request $request){
         if($request->isMethod('post')){
             $data = $request->input();
+            $validator = $this->validator($data);
+
+
+        if ($validator->fails()) {
+            return redirect('/register')
+                        ->withErrors($validator)
+                        ->withInput();
+        }
+
+
 
             $this->create($data);
             return redirect('added');
