@@ -1,9 +1,199 @@
-@chasert "utf-8";
+@charset "utf-8";
 
 html{
     height: 100%;
 }
+
+
+
 body{
+     width: 100vw;
+     /* 横幅に合わせる */
     height: 100%;
-    background: #3C4767;
+    background: linear-gradient(#003366 40%,#FF6633);
+    text-align: center;
+    overflow-y: hidden;
+
+}
+
+#container{
+    text-align: center;
+}
+
+header{
+    text-align: center;
+
+    /* position: absolute;
+    left: 45%;
+    top: 20%; */
+
+}
+h1{
+    text-align: center;
+    margin: 20px;
+}
+
+.Social{
+    margin-top: 2%;
+    font-size: 1.7rem;
+    color: white;
+}
+
+.loginForm{
+    display: inline-block;
+    width: 300px;
+    height: 340px;
+    margin-top: 60px;
+    /* position: absolute;
+        left: 38%;
+        top: 45%; */
+border: 1px;
+text-align: center;
+background-color: rgba(20, 20, 20, 0.3);
+
+}
+
+.loginForm p{
+margin: 30px 0 40px 0;
+
+color: white;
+}
+
+.loginForm div{
+margin-top: 26px;
+}
+
+.loginForm div label{
+    text-align: left;
+    margin-left: 15%;
+    display: block;
+    color: white;
+    margin-bottom: 2px;
+}
+
+
+.input{
+    width: 210px;
+    height: 20px;
+border-radius: 7px;
+}
+
+.btn{
+    padding: 5px 12px;
+    margin-left: 36%;
+    background-color: #0066ff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.register{
+    color: white;
+    font-size: 0.85rem;
+}
+
+/* -----------------*/
+
+
+.loginForm2 {
+    display: inline-block;
+    width: 300px;
+    height: 500px;
+    margin-top: 60px;
+    /* position: absolute;
+        left: 38%;
+        top: 45%; */
+    border: 1px;
+    text-align: center;
+    background-color: rgba(20, 20, 20, 0.3);
+}
+
+.loginForm2 div {
+    margin-top: 26px;
+}
+
+.loginForm2 h2 {
+    margin: 30px 0 60px 0;
+
+    color: white;
+}
+
+
+.loginForm2 label{
+        text-align: left;
+            margin-left: 15%;
+            display: block;
+            color: white;
+            margin-bottom: 2px;
+        }
+
+
+.btn2 {
+    padding: 5px 12px;
+    margin-left: 50%;
+    background-color: #0066ff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 12px;
+}
+
+.loginForm2 p {
+    margin-top: 57px;
+
+}
+
+.loginForm2 p a{
+    color: white;
+}
+
+.loginForm3 {
+    display: inline-block;
+    width: 300px;
+    height: 290px;
+    margin-top: 7%;
+    /* position: absolute;
+        left: 38%;
+        top: 45%; */
+    border: 1px;
+    text-align: center;
+    background-color: rgba(20, 20, 20, 0.3);
+    color: white;
+}
+
+.loginForm3 p {
+margin-top: 16px;
+}
+
+.p1{
+    margin-top: 40px;
+}
+
+.p1B{
+    font-size: 1.1rem;
+}
+
+.p2{
+    margin-left: 10%;
+    text-align: left;
+    font-size: 0.9rem;
+    margin-top: 70px;
+}
+
+.btn3 {
+    width: 120px;
+    margin-top: 20px;
+    padding: 5px 12px;
+margin-left: 25%;
+    background-color: #0066ff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.logo{
+    margin-top: 90px;
 }

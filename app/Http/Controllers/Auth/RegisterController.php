@@ -97,9 +97,8 @@ class RegisterController extends Controller
                         ->withInput();
         }
 
-
-
             $this->create($data);
+            $request->session()->put('username', $data['username']);
             return redirect('added');
         }
         return view('auth.register');
