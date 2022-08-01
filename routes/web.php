@@ -34,10 +34,26 @@ Route::get('/top','PostsController@index');
 
 Route::get('/profile','UsersController@profile');
 
-Route::get('/search','UsersController@index');
-
-Route::get('/follow-list','PostsController@index');
-Route::get('/follower-list','PostsController@index');
+Route::get('/search','UsersController@search')->name('users.search');
+Route::post('/search','UsersController@search');
 
 
 
+Route::post('/tweet','PostsController@tweet');
+
+Route::post('/post/update','PostsController@update');
+
+Route::get('/post/{id}/delete','PostsController@delete');
+
+Route::get('/{id}/follow','UsersController@follow');
+Route::get('/{id}/unfollow','UsersController@unfollow');
+
+Route::get('/followList','FollowsController@followList');
+Route::get('/followerList','FollowsController@followerList');
+
+Route::get('/profile/{id}','UsersController@profile');
+
+Route::get('/mypage','UsersController@mypage');
+Route::post('/profileUpdate','UsersController@profileUpdate');
+
+Route::get('/logout','Auth\LoginController@logout');

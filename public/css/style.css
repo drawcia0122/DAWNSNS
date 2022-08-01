@@ -2,11 +2,17 @@
 html{
 }
 body{
+
 }
 /* header */
 header{
+  position: relative;
     background:#3C4767;
+    width: 100%;
+    height: 100px;
 }
+
+
 
 /* main content */
 #row{
@@ -19,4 +25,527 @@ header{
 #side-bar{
     flex: 0 0 19%;
     border-left: 1px solid #6C6C6C;
+}
+
+.h2{
+  margin: 16px 0 16px 16px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 32px;
+}
+
+
+/* 書いたやつ */
+
+.modal-main{ /* ① モーダルウィンドウを非表示にする。*/
+  display: none;
+
+}
+
+
+
+.modal-inner { /* ② モーダル背景を画面幅いっぱいに設定し、位置を固定する。 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(20, 20, 20, 0.3);
+  color: #666666;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+
+.inner-content{ /* ③ モーダル内の要素全体の子要素を中央揃えにする。 */
+
+
+  text-align: center;
+
+  height: 500px;
+  width: 700px;
+  margin-bottom: 5%;
+  background-color: white;
+}
+
+
+.form-group {
+  position: relative;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+
+}
+
+.form-control{
+margin-top: 7%;
+margin-left: 0.4%;
+  width: 90%;
+  height: 70%;
+}
+
+.updateButton{
+  position: absolute;
+  right: 4.2%;
+  display: block;
+
+}
+
+.modal-inner img{ /* ④ モーダル画像の幅は親要素（.modal-inner）の100%に設定。 */
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+.inner-title{ /* ⑤ タイトルは上下方向の他要素との間隔を調整。 */
+  margin-top: 40px;
+  margin-bottom: 32px;
+  font-size: 2.8rem;
+  font-weight: bold;
+}
+
+.inner-text{ /* ⑥紹介文の文字サイズの設定・表示領域は70%で設定し、他要素との間隔調整。 */
+  font-size: 1.6rem;
+  width: 70%;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.modalClose{ /* ⑦ カーソル設定をします。（.send-button）というお問い合わせボタンで使用したクラスを反映しているので、その他のスタイルは自動的に反映される。 */
+  cursor: pointer;
+  color: aqua;
+  margin-top: 20px;
+}
+
+.icon{
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border: 2.5px solid black;
+  margin: 10px 10px 0 15px;
+}
+
+.tweetForm {
+  display: flex;
+    align-items: center;
+    height: 90px;
+    border-bottom: 5px solid #999;
+
+}
+
+.tweetIcon{
+flex-basis: 50px;
+margin: 20px 20px 20px 0;
+}
+
+.tweetInput{
+  position: relative;
+    flex-basis: 70%;
+    height: 80%;
+    margin-top: 10px;
+}
+
+.inputinput{
+
+  width: 70%;
+  height: 70%;
+  border: none;
+}
+
+.table{
+  width: 100%;
+    vertical-align: top;
+}
+
+
+
+.timeline{
+width: 100%;
+height: 170px;
+  border-bottom: 1px dotted #999;
+}
+
+.icon6 {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border: 2.5px solid black;
+  margin: 15px 20px 0 15px;
+  position: relative;
+  top: -40px;
+
+}
+
+
+
+.username{
+  margin-top: 25px;
+}
+
+.post{
+  width: 80%;
+  height: 100px;
+  padding: 20px 0 0 0;
+}
+
+
+
+.tweetBtn{
+position:absolute;
+right: 15%;
+bottom: 10px;
+}
+
+.time{
+  width: 150px;
+  position: relative;
+  text-align: center;
+  margin-top: 20px;
+  margin-right: 15px;
+}
+
+
+.updeli{
+  text-align: right;
+  vertical-align: bottom;
+}
+
+#head{
+  width: 100%;
+  height: 90px;
+  display: inline;
+  position: relative;
+}
+
+#head h1{
+  margin-left: 10px;
+}
+
+.mainMenu {
+
+  color: white;
+  position: absolute;
+  right: 8px;
+  top: 0;
+}
+
+.mainMenu p {
+  position: absolute;
+  text-align: right;
+  width: 200px;
+  top: 45px;
+  right: 65px;
+  display: inline-block;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.mainMenu p span {
+  margin-left: 10px;
+  margin-right: 10px;
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-bottom: solid 1px white;
+  border-left: solid 1px white;
+  transform: rotate(-45deg);
+}
+
+.mainMenu p span.active{
+  transform: rotate(135deg);
+
+}
+
+.mainMenu img {
+  display: inline-block;
+  margin-top: 26px;
+  margin-right: 10px;
+}
+
+.menu{
+  display: none;
+  position: absolute;
+  top: 100px;
+  right: -10px;
+  width: 203px;
+  background-color: white;
+}
+
+.menu li{
+
+  border-bottom: solid 1px black;
+  border-left: solid 1px black;
+  text-align: center;
+  color: white;
+}
+
+.menu li:hover{
+  background-color: coral;
+  color: white;
+}
+
+.menu li a{
+  display: inline-block;
+  width: 203px;
+  padding: 25px 0;
+  color: black;
+}
+
+.menu li a:hover{
+  color: white;
+}
+
+
+
+.icon2 {
+
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border: 2.5px solid black;
+
+}
+
+
+
+.icon4 {
+
+  top: 100px;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border: 2.5px solid black;
+  margin: 10px 10px 0 5px;
+}
+
+.boss{
+  display: flex;
+  margin-top: 30px;
+  margin-left: 30px;
+
+}
+
+.formForm{
+
+  margin: -15px 10px 0 30px;
+  width: 60%;
+  height: 600px;
+}
+
+.formForm div{
+  margin-top: 20px;
+}
+
+.formForm div input{
+  background-color: rgba(230,230,230);
+  border: none;
+  border-bottom: solid 1px black;
+}
+
+.tr{
+  display: inline-block;
+  width: 150px;
+}
+
+
+.followCount{
+  display: inline-block;
+  margin-left: 20px;
+}
+
+
+
+
+#confirm{
+  margin-top: 10px;
+
+  height: 250px;
+  border-bottom: solid 1px black;
+  margin-left: 12px;
+}
+
+
+.btn2 {
+  padding: 5px 12px;
+  margin-left: 50%;
+  background-color: #0066ff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 12px;
+  text-align: center;
+}
+
+.btn2 a{
+
+  color: white;
+}
+
+
+.btn3 {
+  margin: auto;
+  width: 70%;
+  background-color: #0066ff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 20px;
+  height: 50px;
+  text-align: center;
+}
+
+.btn3 a{
+  display: block;
+  margin: auto;
+  color: white;
+  padding-top: 17px;
+}
+
+.followCount{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+
+.btnBlue {
+  margin: auto;
+  width: 128px;
+  height: 30px;
+  padding: 7px 16px;
+  background-color: #0066ff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 12px;
+  text-align: center;
+}
+
+.btnRed {
+  margin: auto;
+  width: 128px;
+  height: 30px;
+  padding: 7px 16px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 12px;
+  text-align: center;
+}
+
+.btnBlue2 {
+  margin: auto;
+  width: 100px;
+  height: 30px;
+  padding: 16px 10px 3px 10px;
+  background-color: #0066ff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 30px;
+  text-align: center;
+
+}
+
+
+
+.btnRed2 {
+  margin: auto;
+  width: 50px;
+  height: 30px;
+  padding: 16px 10px 3px 10px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 30px;
+  text-align: center;
+}
+
+
+
+
+.icon5 {
+
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border: 2.5px solid black;
+  margin: 10px 0 0 30px;
+}
+
+
+.search{
+  width: 100%;
+  height: 40px;
+  border-bottom: solid 1px black;
+    text-align: center;
+}
+
+
+.searchForm{
+ margin-top: 15px;
+  width: 1000px;
+}
+
+
+.searchInput{
+  width: 400px;
+}
+
+.bigList{
+  height: auto;
+
+}
+
+.list{
+
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      height: auto;
+      border-bottom: 5px solid #999;
+      padding-bottom: 20px;
+}
+
+
+
+.tr2{
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  height: auto;
+}
+
+.BIO2{
+  margin-left: 50px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.BIO{
+  width: 64px;
+}
+
+
+.iconKing{
+  width: 100px;
+}
+
+.timeKing{
+  width: 200px;
 }
