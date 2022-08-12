@@ -1,4 +1,4 @@
-$(function () { //①
+$(function () {
   $('.modalopen').each(function () {
     $(this).on('click', function () {
       var target = $(this).data('target');

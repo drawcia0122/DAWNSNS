@@ -47,6 +47,9 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \Illuminate\Contracts\Validation\Validator
      */
+
+
+
     protected function validator(array $data)
     {
         //makeでルールを作っている、$dateを照合している。
@@ -101,6 +104,8 @@ class RegisterController extends Controller
             $request->session()->put('username', $data['username']);
             return redirect('added');
         }
+
+
         return view('auth.register');
     }
 

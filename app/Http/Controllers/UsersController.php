@@ -43,8 +43,12 @@ public function profileUpdate(Request $request){
         ])->validate();
 
        $password = $request->input('password');
-         if($password){
-            //ここにパスワードのバリデーション
+         if(isset($password)){
+
+
+            //本当はここにパスワードのバリデーションを書くけど省略してる。
+
+
         DB::table('users')
         ->where('id',Auth::id())
         ->update([
@@ -113,6 +117,24 @@ public function profileUpdate(Request $request){
     }
 
 
+
+
+    public function test(){
+
+         $lists = DB::table('posts')
+            ->where('user_id',Auth::id())
+            ->select('posts')
+            ->orderBy('posts.created_at', 'desc')
+            ->get();
+
+        return view('users.test',['lists'=>$lists]);
+    }
+
+
+
+
+
+
     public function search(Request $request){
 
          $search = $request->input('search');
@@ -132,7 +154,7 @@ public function profileUpdate(Request $request){
          ->get()
          ->toArray();
          $numbers=array_column($followlist,'follow');
-         //自分がフォローしてる人のID番号に絞って取得している
+         //自分がフォローしてる人のID番号に絞って取得している array_columnは値だけを抜き出して羅列している
 
           return view('users.search',['search'=>$search,'users'=>$users,'numbers'=>$numbers]);
     }
@@ -158,5 +180,9 @@ public function unfollow($id){
         return back();
         // 直前のリンクに戻るらしい
     }
+
+
+
+
 
 }

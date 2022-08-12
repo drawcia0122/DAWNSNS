@@ -45,11 +45,14 @@
     </div>
 
 
-    <div>
+  <div>
      <div class="tr">
       new password
       </div>
-      <input type="password" name='password'></tr>
+      <input type="password" name='password'>
+    @if ($errors->has('password'))
+     <tr>{{$errors->first('password')}}</tr>
+    @endif
     </div>
 
 
@@ -57,10 +60,8 @@
      <div class="tr">
       BIO
       </div>
-      <input type="text" value="{{ $profile->bio }}" name="bio" value=""></tr>
-    @if ($errors->has('password'))
-     <tr>{{$errors->first('password')}}</tr>
-    @endif
+      <input type="text" value="{{ $profile->bio }}" name="bio" ></tr>
+
     </div>
 
 

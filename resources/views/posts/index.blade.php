@@ -7,7 +7,7 @@
 
   <div class="tweetForm">
 
-<a href="/profile/{{Auth::id()}}" class='tweetIcon'><img class="icon" src="images/{{Auth::user()->images}}" alt="アイコン"></a>
+<a href="/mypage" class='tweetIcon'><img class="icon" src="images/{{Auth::user()->images}}" alt="アイコン"></a>
 
 <form action="/tweet" method="POST" class='tweetInput'>
   @csrf
@@ -80,6 +80,8 @@
             @endforeach
         </table>
     </div>
+
+    <div><a href="/test">aaaaaa</a></div>
 
 
 

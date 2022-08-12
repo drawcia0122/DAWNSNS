@@ -23,6 +23,21 @@ class PostsController extends Controller
 
     }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     public function tweet (Request $request){
 
     $request->validate([

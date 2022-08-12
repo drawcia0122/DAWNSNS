@@ -57,3 +57,8 @@ Route::get('/mypage','UsersController@mypage');
 Route::post('/profileUpdate','UsersController@profileUpdate');
 
 Route::get('/logout','Auth\LoginController@logout');
+
+
+
+
+Route::get('test','UsersController@test');

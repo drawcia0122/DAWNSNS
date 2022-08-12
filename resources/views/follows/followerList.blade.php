@@ -21,24 +21,25 @@
 
     @foreach ($lists as $list)
 
-            <tr class="timeline">
+  <tr class="timeline">
+    <td class="iconKing">
+      <img class="icon6" src="{{asset('images/'.$list->images)}}" alt="アイコン">
+    </td>
+    <td  class="timeline2">
+      <div>
+        <p class="username">{{ $list->username }}</p>
+        <p class="post">{{ $list->posts }}</p>
+      </div>
+    </td>
+    <td class="timeKing">
+      <div class='time'>
+        <p>{{ $list->created_at }}</p>
+      </div>
+    </td>
+  </tr>
 
-
-
-                <td class="iconKing"><img class="icon6" src="{{asset('images/'.$list->images)}}" alt="アイコン"></a></td>
-                <td>
-                  <div>
-                    <p class="username">{{ $list->username }}</p>
-                    <p class="post">{{ $list->posts }}</p>
-                  </div>
-                </td>
-                <td class="timeKing">
-                  <div class='time'>
-                    <p>{{ $list->created_at }}</p>
-                  </div>
-                </td>
-                </tr>
     @endforeach
+
 </table>
 
 @endsection
